@@ -23,30 +23,39 @@ namespace spleeterPlus.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string spleeterPath {
+        public string SpleeterPath {
             get {
-                return ((string)(this["spleeterPath"]));
+                return ((string)(this["SpleeterPath"]));
+            }
+            set {
+                this["SpleeterPath"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string outputFolder {
+        public string OutputFolder {
             get {
-                return ((string)(this["outputFolder"]));
+                return ((string)(this["OutputFolder"]));
+            }
+            set {
+                this["OutputFolder"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public int defaultStems {
+        public decimal DefaultStems {
             get {
-                return ((int)(this["defaultStems"]));
+                return ((decimal)(this["DefaultStems"]));
+            }
+            set {
+                this["DefaultStems"] = value;
             }
         }
     }

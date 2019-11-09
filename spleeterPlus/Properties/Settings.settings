@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="spleeterPlus.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="spleeterPath" Type="System.String" Scope="Application">
+    <Setting Name="SpleeterPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="outputFolder" Type="System.String" Scope="Application">
+    <Setting Name="OutputFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="defaultStems" Type="System.Int32" Scope="Application">
+    <Setting Name="DefaultStems" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
   </Settings>
