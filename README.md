@@ -1,4 +1,4 @@
-#spleeterPlus
+spleeterPlus
 ====
 ## 説明
 spleeterをVisual Studioアプリでラップしてるだけです。
