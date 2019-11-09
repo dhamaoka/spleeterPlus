@@ -3,6 +3,8 @@
 ## 説明
 spleeterをVisual Studioアプリでラップしてるだけです。
 
+[Gigazineの記事を見て面白そうだったので。](https://gigazine.net/news/20191107-spleeter/)
+
 ```python
   conda activate spleeter-cpu
   spleeter separate -i spleeter/audio_example.mp3 -p spleeter:2stems -o output
