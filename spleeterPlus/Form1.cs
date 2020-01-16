@@ -219,6 +219,8 @@ namespace spleeterPlus
                 return;
             }
             string psCommand = $"& '{@spleeterPath}' ; conda activate '{@textSpleeterPath.Text}'; start-sleep -m 2000  ; conda activate spleeter-cpu ; {cmd}";
+            //string psCommand = $"& '{@spleeterPath}' ; conda install -c conda-forge spleeter; start-sleep -m 2000 ; y ; {cmd}";
+            //string psCommand = $"& '{@spleeterPath}' ; {cmd}";
 
             this.Enabled = false;
             this.UseWaitCursor = true; 
@@ -231,21 +233,40 @@ namespace spleeterPlus
             {
                 textoutputFolder.Text = TempOutputPath;
             }
+            
             MessageBox.Show("終了しました。", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             System.Diagnostics.Process.Start(TempOutputPath);
         }
 
         //PowerShellの実行メソッド
-        static void OpenWithArguments(string options)
+        static bool OpenWithArguments(string options)
         {
             Process proc = new Process();
             proc.StartInfo.FileName = "PowerShell.exe";
             //PowerShellのWindowを立ち上げずに実行。
             //cmd.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             // 引数optionsをShellのコマンドとして渡す。
+            
             proc.StartInfo.Arguments = options;
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.StartInfo.UseShellExecute = false;
             proc.Start();
             proc.WaitForExit();
+
+            try
+            {
+                if (proc.StandardError != null)
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
